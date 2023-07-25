@@ -9,9 +9,17 @@ import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
 
+
+
+    private var vBinding : ActivityMainBinding? = null
+    private val binding get() = vBinding!!
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         val viewPager: ViewPager = findViewById(R.id.viewPager)
         val tabLayout: TabLayout = findViewById(R.id.tabLayout)
@@ -20,4 +28,12 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = adapter
         tabLayout.setupWithViewPager(viewPager)
     }
+
+    override fun onDestroy() {
+        vBinding = null
+        super.onDestroy()
+    }
+
 }
+
+

@@ -8,29 +8,43 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TimePicker
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import java.util.*
+import com.example.helixproject.ui.theme.AlarmReceiver
+import java.util.Calendar
 
 class Fragment1 : Fragment() {
+
+
+
+    lateinit var fragmentView: View
+    lateinit var timePicker:TimePicker
+    lateinit var btnSetAlarm: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_1, container, false)
+        fragmentView = inflater.inflate(R.layout.fragment_1, container, false)
+        return fragmentView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initLayout()
         // 알람 설정 버튼 클릭 시 알람 설정
         btnSetAlarm.setOnClickListener {
             setAlarm()
         }
     }
 
+    private fun initLayout(){
+        timePicker = fragmentView.findViewById(R.id.timePicker)
+    }
     private fun setAlarm() {
         val alarmManager = requireContext().getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
