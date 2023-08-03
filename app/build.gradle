@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 33
     namespace 'com.example.helixproject'
 
     buildFeatures {
@@ -17,7 +17,7 @@ android {
     defaultConfig {
         applicationId "com.example.helixproject"
         minSdk 24
-        targetSdkVersion 34
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -43,9 +43,9 @@ android {
     buildFeatures {
         compose true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion '1.3.2'
-    }
+//    composeOptions {
+//        kotlinCompilerExtensionVersion '1.7.20'
+//    }
     packagingOptions {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'

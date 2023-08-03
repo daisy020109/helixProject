@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment1">
+    tools:context=".Fragment1"
+    android:orientation="vertical">
 
 
     <!-- TimePicker -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
     <!-- Set Alarm 버튼 -->
 
     <TimePicker
         android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:timePickerMode="spinner" />
@@ -28,6 +25,7 @@
         android:layout_below="@id/timePicker"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Set Alarm" />
+        android:text="Set Alarm"
+        android:layout_gravity="center"/>
 
-</FrameLayout>
+</LinearLayout>

@@ -37,8 +37,7 @@ class Fragment1 : Fragment() {
 
         initLayout()
         // 알람 설정 버튼 클릭 시 알람 설정
-        btnSetAlarm.setOnClickListener {
-            setAlarm()
+        btnSetAlarm.setOnClickListener {            setAlarm()
         }
     }
 
