@@ -79,6 +79,7 @@ class Fragment2 : Fragment() {
             params.put("appid", API_KEY)
             doNetworking(params)
         }
+        //
 
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
