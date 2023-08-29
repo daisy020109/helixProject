@@ -21,7 +21,7 @@ class Fragment1 : Fragment() {
 
     lateinit var fragmentView: View
     lateinit var timePicker:TimePicker
-    lateinit var btnSetAlarm: Button
+    var btnSetAlarm: Button? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,7 +37,7 @@ class Fragment1 : Fragment() {
 
         initLayout()
         // 알람 설정 버튼 클릭 시 알람 설정
-        btnSetAlarm.setOnClickListener {            setAlarm()
+        btnSetAlarm?.setOnClickListener {            setAlarm()
         }
     }
 
